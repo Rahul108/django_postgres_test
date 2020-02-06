@@ -42,7 +42,7 @@ $ CREATE USER rahulsarker WITH ENCRYPTED PASSWORD '465757';
 
 # Permissions
 $ ALTER ROLE rahulsarker SET client_encoding TO 'utf8';
-$ ALTER ROLE rahuksarker SET default_transaction_isolation TO 'read committed';
+$ ALTER ROLE rahulsarker SET default_transaction_isolation TO 'read committed';
 $ ALTER ROLE rahulsarker SET timezone TO 'UTC';
 $ GRANT ALL PRIVILEGES ON DATABASE test_django_postgres TO rahulsarker;
 ```
