@@ -38,13 +38,13 @@ $ psql
 $ CREATE DATABASE test_django_postgres;
 
 # Creating an user with " CREATE USER myuser WITH ENCRYPTED PASSWORD 'mypass'"
-$ CREATE USER rahulsarker WITH ENCRYPTED PASSWORD '465757';
+$ CREATE USER <username> WITH ENCRYPTED PASSWORD '<password>';
 
 # Permissions
 $ ALTER ROLE rahulsarker SET client_encoding TO 'utf8';
 $ ALTER ROLE rahulsarker SET default_transaction_isolation TO 'read committed';
 $ ALTER ROLE rahulsarker SET timezone TO 'UTC';
-$ GRANT ALL PRIVILEGES ON DATABASE test_django_postgres TO rahulsarker;
+$ GRANT ALL PRIVILEGES ON DATABASE test_django_postgres TO <username>;
 ```
 
 * Connecting database to django : Open django_postgres > settings.py
@@ -53,8 +53,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'test_django_postgres',
-        'USER': 'rahulsarker',
-        'PASSWORD': '465757',
+        'USER': '<username>',
+        'PASSWORD': '<password>',
         'HOST': 'localhost',
         'PORT': '',
     }
